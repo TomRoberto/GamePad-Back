@@ -7,8 +7,7 @@ const Review = mongoose.model("Review", {
   },
   text: String,
   grade: number,
-  gameSlug: String,
-  gameId: String,
+  gameData: Object,
 });
 
 module.exports = Review;
