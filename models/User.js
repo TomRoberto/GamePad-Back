@@ -12,7 +12,7 @@ const User = mongoose.model("User", {
   token: String,
   hash: String,
   salt: String,
-  favoriteGames: Array,
+  favoriteGames: [{ ref: "Favorite", type: mongoose.Schema.Types.ObjectId }],
   reviews: [{ ref: "Review", type: mongoose.Schema.Types.ObjectId }],
 });
 
