@@ -12,12 +12,15 @@ const isAuthenticated = async (req, res, next) => {
         next();
       } else {
         res.status(401).json({ message: "Unauthorized, didnt find user" });
+        console.log("pb");
       }
     } else {
       res.status(401).json({ message: "Unauthorized, bad authorisation" });
+      console.log("pb");
     }
   } catch (error) {
     res.status(400).json({ error: error.message });
+    console.log("pb");
   }
 };
 

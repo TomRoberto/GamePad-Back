@@ -5,8 +5,11 @@ const Review = mongoose.model("Review", {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
+  title: String,
   text: String,
-  grade: number,
+  grade: Number,
+  thumbUp: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
+  thumdown: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
   gameData: Object,
 });
 

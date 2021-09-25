@@ -21,6 +21,9 @@ app.use(userRoutes);
 const favoriteRoutes = require("./routes/favorite");
 app.use(favoriteRoutes);
 
+const reviewRoutes = require("./routes/review");
+app.use(reviewRoutes);
+
 app.get("/", (req, res) => {
   res.status(200).json({
     message: "Welcome on this server ! 😎",
